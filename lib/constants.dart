@@ -7,4 +7,4 @@ const kTransitionDuration =Duration(milliseconds: 250);
 const kBenne ='Benne';
 const kPlaywriteOsterreich ='Playwrite Danmark Loopet';
 const kSevillana ='Sevillana';
-const double kEdgesPadding =30;
+const double kEdgesPadding =25;
