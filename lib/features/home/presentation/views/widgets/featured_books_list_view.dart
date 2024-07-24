@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/dummy_books.dart';
 import 'custom_book_image.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -12,11 +13,16 @@ class FeaturedBooksListView extends StatelessWidget {
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
-            return const Padding(
-              padding: EdgeInsets.only(right: 24),
-              child: CustomBookImage(),
+            final book = books[index];
+            return  Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: CustomBookImage(
+                image: book.image
+              ),
             );
-          }),
+          },
+        itemCount: books.length,
+      ),
     );
   }
 }
