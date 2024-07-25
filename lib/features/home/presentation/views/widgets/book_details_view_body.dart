@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../../../../constants.dart';
+import 'book_action.dart';
 import 'custom_book_details_app_bar.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -23,7 +24,7 @@ class BookDetailsViewBody extends StatelessWidget {
             child: CustomBookDetailsAppBar(),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            padding: EdgeInsets.symmetric(horizontal: width * 0.25),
             child: const CustomBookImage(
               image: AssetsData.testImage1,
             ),
@@ -50,8 +51,12 @@ class BookDetailsViewBody extends StatelessWidget {
           const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+          const SizedBox(height: 14,),
+          const BookAction(),
         ],
       ),
     );
   }
 }
+
+
