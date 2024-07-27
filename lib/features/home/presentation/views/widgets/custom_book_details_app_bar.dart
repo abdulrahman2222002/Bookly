@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
+import '../../../../../core/utils/widgets/x_close_button.dart';
 
 class CustomBookDetailsAppBar extends StatelessWidget {
   const CustomBookDetailsAppBar({super.key});
@@ -11,12 +12,7 @@ class CustomBookDetailsAppBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(
-          onPressed: () {
-            GoRouter.of(context).pop();
-          },
-          icon: const Icon(Icons.close),
-        ),
+        const XCloseButton(),
         IconButton(
           onPressed: () {},
           icon: const Icon(Icons.shopping_cart_outlined),
@@ -25,3 +21,5 @@ class CustomBookDetailsAppBar extends StatelessWidget {
     );
   }
 }
+
+
