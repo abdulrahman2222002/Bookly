@@ -12,12 +12,14 @@ class SearchTextFeild extends StatelessWidget {
         child: TextField(
           decoration: InputDecoration(
             hintText: 'Search',
-            suffixIcon:  Opacity(
+            suffixIcon: Opacity(
               opacity: 0.8,
               child: IconButton(
-                icon: const Icon(FontAwesomeIcons.magnifyingGlass,
-                  size: 16,),
-                onPressed: (){},
+                icon: const Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                  size: 16,
+                ),
+                onPressed: () {},
               ),
             ),
             border: buildOutlineInputBorder(),
