@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 
 import 'home_repo.dart';
 
- abstract class HomeRepoImpl implements HomeRepo {
+  class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
 
   HomeRepoImpl(this.apiService);
@@ -64,4 +64,7 @@ import 'home_repo.dart';
   }
 
 
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }

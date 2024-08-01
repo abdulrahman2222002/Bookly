@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -24,7 +26,7 @@ class ServerFailure extends Failure {
         return ServerFailure.fromResponse(
             dioError.response!.statusCode, dioError.response!.data);
       case DioErrorType.cancel:
-        return ServerFailure('Request to ApiServer was canceld');
+        return ServerFailure('Request to ApiServer was cancelled');
 
       case DioErrorType.unknown:
         if (dioError.message!.contains('SocketException')) {
