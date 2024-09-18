@@ -9,7 +9,7 @@ class SimilarBooksListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   SizedBox(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * .2,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -18,7 +18,7 @@ class SimilarBooksListView extends StatelessWidget {
           return  Padding(
             padding: const EdgeInsets.only(right: 24),
             child: CustomBookImage(
-                image: book.image
+                 imageUrl: book.image
             ),
           );
         },

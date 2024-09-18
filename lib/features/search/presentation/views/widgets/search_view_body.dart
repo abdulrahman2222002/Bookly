@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
-import '../../../../home/presentation/views/widgets/best_seller_list_view.dart';
+import '../../../../home/presentation/views/widgets/newest_book_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
