@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class BookRating extends StatelessWidget {
   const BookRating({super.key,  this.mainAxisAlignment= MainAxisAlignment.start, required this.rate, required this.rateCount});
   final MainAxisAlignment mainAxisAlignment;
-  final int rate;
+  final num rate;
   final int rateCount;
   @override
   Widget build(BuildContext context) {

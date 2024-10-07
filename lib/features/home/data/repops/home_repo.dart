@@ -3,6 +3,9 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/errors/failures.dart';
 
 abstract class HomeRepo {
-  Future<Either<Failure, List<BookModel>>> fetchNewestBooks(); // Correct method signature
+  Future<Either<Failure, List<BookModel>>>
+      fetchNewestBooks(); // Correct method signature
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
+  Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(
+      {required String category});
 }

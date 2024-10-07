@@ -3,8 +3,10 @@ import 'package:bookly/features/search/presentation/views/widgets/search_result_
 import 'package:bookly/features/search/presentation/views/widgets/search_text_feild.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../../../constants.dart';
+import '../../../../../core/utils/widgets/x_close_button.dart';
 import '../../../../home/presentation/views/widgets/newest_book_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -17,7 +19,16 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SearchTextFeild(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 25.0),
+                child: XCloseButton(),
+              ),
+              Expanded(child: SearchTextFeild()),
+            ],
+          ),
           SizedBox(
             height: 16,
           ),

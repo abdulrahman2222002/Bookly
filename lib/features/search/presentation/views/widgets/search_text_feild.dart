@@ -7,24 +7,27 @@ class SearchTextFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SizedBox(
-        height: 50,
-        child: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search',
-            suffixIcon: Opacity(
-              opacity: 0.8,
-              child: IconButton(
-                icon: const Icon(
-                  FontAwesomeIcons.magnifyingGlass,
-                  size: 16,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
+        child: SizedBox(
+          height: 50,
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: 'Search',
+              suffixIcon: Opacity(
+                opacity: 0.8,
+                child: IconButton(
+                  icon: const Icon(
+                    FontAwesomeIcons.magnifyingGlass,
+                    size: 16,
+                  ),
+                  onPressed: () {},
                 ),
-                onPressed: () {},
               ),
+              border: buildOutlineInputBorder(),
+              enabledBorder: buildOutlineInputBorder(),
+              focusedBorder: buildOutlineInputBorder(),
             ),
-            border: buildOutlineInputBorder(),
-            enabledBorder: buildOutlineInputBorder(),
-            focusedBorder: buildOutlineInputBorder(),
           ),
         ),
       ),

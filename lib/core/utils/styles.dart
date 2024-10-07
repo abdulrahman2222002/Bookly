@@ -13,9 +13,9 @@ abstract class Style {
     fontSize: 18,
     fontWeight:FontWeight.normal,
   );
-  static const textStyle28 =TextStyle(
-    fontSize: 28,
-    fontWeight:FontWeight.normal,
+  static const textStyle24 =TextStyle(
+    fontSize: 24,
+    fontWeight:FontWeight.bold,
     fontFamily: kBenne,
   );
   static const textStyle12 =TextStyle(
