@@ -1,6 +1,5 @@
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/app_routes.dart';
-import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/custom_book_image.dart';
@@ -17,15 +16,17 @@ class NewestBooksListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        GoRouter.of(context).push(AppRoutes.kBookDetailsView);
+        GoRouter.of(context).push(AppRoutes.kBookDetailsView,
+        extra: bookModel,
+        );
       },
       child: SizedBox(
-        height: 100,
+        height: 120,
         child: Row(
           children: [
             CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks!.thumbnail),
             const SizedBox(
-              width: 20,
+              width: 25,
             ),
             Expanded(
               child: Column(

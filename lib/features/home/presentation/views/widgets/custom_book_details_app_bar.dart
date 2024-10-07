@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import '../../../../../constants.dart';
 import '../../../../../core/utils/widgets/x_close_button.dart';
 
 class CustomBookDetailsAppBar extends StatelessWidget {
@@ -9,15 +7,18 @@ class CustomBookDetailsAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        const XCloseButton(),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.shopping_cart_outlined),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 8,bottom: 16, right: 8,left: 8),
+      child: Row(
+        children: [
+          const XCloseButton(),
+          const Spacer(),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.shopping_cart_outlined),
+          ),
+        ],
+      ),
     );
   }
 }
